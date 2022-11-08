@@ -9,6 +9,11 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+          registry-url: 'https://packages.aa.com/artifactory/api/npm/npm-public/'
       - run: |
           npm i -g npm
           npm ci --ignore-scripts --legacy-peer-deps
