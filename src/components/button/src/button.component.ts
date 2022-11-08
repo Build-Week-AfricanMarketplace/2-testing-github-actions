@@ -14,6 +14,8 @@ import type { PropertyValues, TemplateResult } from "lit";
  * @fires adc-focus - listens for a focus event on the button.
  * @fires adc-blur - listens for a blur event on the button.
  * @attr {string} [label-text] - The text-content of the button, could also be
+ * @attr {string} [label-text] - The text-content of the button, could also be
+ * @attr {string} [label-text] - The text-content of the button, could also be
  * the `<slot>` content.
  * @slot default - text content slot (default)
  * @slot leading-icon - This is a slot for an icon before text.
