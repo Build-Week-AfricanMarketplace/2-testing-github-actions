@@ -10,6 +10,11 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: getPrUrl
+        id: pr-url
+        uses: ammaratef45/pr-url-action@v1
+      - name: display
+        run: echo ${{ steps.pr-url.outputs.url }}
 #       - uses: actions/setup-node@v3
 #         with:
 #           node-version-file: '.nvmrc'
