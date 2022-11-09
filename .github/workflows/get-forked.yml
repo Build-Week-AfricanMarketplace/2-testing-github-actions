@@ -28,6 +28,7 @@ jobs:
           echo github.repositoryUrl => ${{github.repositoryUrl}}
           echo github.event.pull_request.head.repositoryUrl => ${{github.event.pull_request.head.repositoryUrl}} 
           echo github.event.pull_request.repositoryUrl => ${{github.event.pull_request.repositoryUrl}} 
+          echo GITHUB_EVENT_PATH => ${{GITHUB_EVENT_PATH}}
           
           	
           	
