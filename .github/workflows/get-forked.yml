@@ -21,19 +21,23 @@ jobs:
 #           cache: 'npm'
 #           registry-url: 'https://packages.aa.com/artifactory/api/npm/npm-public/'
       - run: |
-          echo "Check for stuff"
-          echo base.sha => ${{ github.event.pull_request.base.sha }}
-          echo head.sha => ${{github.event.pull_request.head.sha}}
-          echo actor => ${{github.actor}}
-          echo github.repositoryUrl => ${{github.repositoryUrl}}
-          echo github.event.pull_request.head.repositoryUrl => ${{github.event.pull_request.head.repositoryUrl}} 
-          echo github.event.pull_request.repositoryUrl => ${{github.event.pull_request.repositoryUrl}} 
-          echo GITHUB_EVENT_PATH => ${{github}}
-          echo GITHUB_CONTEXT => "$github" 
-          echo '${{ toJSON(github) }}'
           echo '${{github.event.pull_request.head.repo.ssh_url}}'
           git checkout ${{ github.event.pull_request.base.sha }}
           git checkout ${{ github.event.pull_request.head.sha }}
+#       - run: |
+#           echo "Check for stuff"
+#           echo base.sha => ${{ github.event.pull_request.base.sha }}
+#           echo head.sha => ${{github.event.pull_request.head.sha}}
+#           echo actor => ${{github.actor}}
+#           echo github.repositoryUrl => ${{github.repositoryUrl}}
+#           echo github.event.pull_request.head.repositoryUrl => ${{github.event.pull_request.head.repositoryUrl}} 
+#           echo github.event.pull_request.repositoryUrl => ${{github.event.pull_request.repositoryUrl}} 
+#           echo GITHUB_EVENT_PATH => ${{github}}
+#           echo GITHUB_CONTEXT => "$github" 
+#           echo '${{ toJSON(github) }}'
+#           echo '${{github.event.pull_request.head.repo.ssh_url}}'
+#           git checkout ${{ github.event.pull_request.base.sha }}
+#           git checkout ${{ github.event.pull_request.head.sha }}
           
           	
           	
