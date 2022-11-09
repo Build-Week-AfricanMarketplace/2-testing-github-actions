@@ -19,10 +19,9 @@ jobs:
           echo "Check for stuff"
           echo base.sha => ${{ github.event.pull_request.base.sha }}
           echo base.sha => ${{github.event.pull_request.head.sha}}
-          echo action_repository => ${{github.action_repository}}
           echo actor => ${{github.actor}}
-          echo actor => ${{github.ref}}
-          echo actor => ${{github.repositoryUrl}}          
+          echo ref => ${{github.ref}}
+          echo repositoryUrl => ${{github.repositoryUrl}}          
           
           	
           	
