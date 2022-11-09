@@ -20,7 +20,6 @@ jobs:
           echo base.sha => ${{ github.event.pull_request.base.sha }}
           echo base.sha => ${{github.event.pull_request.head.sha}}
           echo actor => ${{github.actor}}
-          echo ref => ${{github.ref}}
           echo repositoryUrl => ${{github.repositoryUrl}}          
           
           	
