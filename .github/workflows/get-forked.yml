@@ -32,6 +32,8 @@ jobs:
           echo GITHUB_CONTEXT => "$github" 
           echo '${{ toJSON(github) }}'
           echo '${{github.event.pull_request.head.repo.ssh_url}}'
+          git checkout ${{ github.event.pull_request.base.sha }}
+          git checkout ${{ github.event.pull_request.head.sha }}
           
           	
           	
