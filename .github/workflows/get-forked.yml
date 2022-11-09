@@ -1,0 +1,30 @@
+
+name: Try to get forked commits
+on:
+  pull_request_target:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version-file: '.nvmrc'
+#           cache: 'npm'
+#           registry-url: 'https://packages.aa.com/artifactory/api/npm/npm-public/'
+      - run: |
+          echo "Check for stuff"
+          echo base.sha => ${{ github.event.pull_request.base.sha }}
+          echo base.sha => ${{github.event.pull_request.head.sha}}
+#       - run: |
+#           npm i -g npm
+#           npm ci --ignore-scripts --legacy-peer-deps
+#           npm rebuild && npm run prepare --if-present
+#           npm run bootstrap
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+#       - name: Build Updated Components
+#         run: npm run build:since -- --base=${{ github.event.pull_request.base.sha }} --head=${{github.event.pull_request.head.sha}}
