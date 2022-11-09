@@ -18,9 +18,11 @@ jobs:
       - run: |
           echo "Check for stuff"
           echo base.sha => ${{ github.event.pull_request.base.sha }}
-          echo base.sha => ${{github.event.pull_request.head.sha}}
+          echo head.sha => ${{github.event.pull_request.head.sha}}
           echo actor => ${{github.actor}}
-          echo repositoryUrl => ${{github.repositoryUrl}}          
+          echo github.repositoryUrl => ${{github.repositoryUrl}}
+          echo github.event.pull_request.head.repositoryUrl => ${{github.event.pull_request.head.repositoryUrl}} 
+          echo github.event.pull_request.repositoryUrl => ${{github.event.pull_request.repositoryUrl}} 
           
           	
           	
