@@ -30,7 +30,7 @@ jobs:
           echo github.event.pull_request.repositoryUrl => ${{github.event.pull_request.repositoryUrl}} 
           echo GITHUB_EVENT_PATH => ${{github}}
           echo GITHUB_CONTEXT => "$GITHUB_CONTEXT" 
-          echo '${{ toJSON($GITHUB_CONTEXT) }}'
+          echo '${{ toJSON(GITHUB_CONTEXT) }}'
           
           	
           	
